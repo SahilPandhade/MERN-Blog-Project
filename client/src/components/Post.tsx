@@ -15,7 +15,7 @@ const Post = ({_id,title,summary,cover,content,createdAt,author}:postProps) => {
     <div className="post">
         <div className="image">
             <Link to={`/post/${_id}`}>
-                <img src={'http://localhost:4000/'+cover} alt='Article source'></img>
+                <img src={`http://localhost:4000/${cover}`} alt='Article source'></img>
             </Link>
         </div> 
         <div className="texts">

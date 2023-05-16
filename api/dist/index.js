@@ -27,7 +27,6 @@ dotenv_1.default.config();
 const port = process.env.PORT || 4000;
 const mongoUri = process.env.MONGO_URI;
 const secret = process.env.SECRET || 'SECRET';
-// Now you can access your environment variables using the `process.env` object
 const uploadMiddleWare = (0, multer_1.default)({
     dest: 'uploads/'
 });
@@ -68,7 +67,7 @@ app.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                     if (err)
                         throw err;
                     if (token) {
-                        res.cookie('token', token).json({
+                        res.cookie('token', token, { maxAge: 3600000, httpOnly: true }).json({
                             id: userDoc._id,
                             userName,
                         });

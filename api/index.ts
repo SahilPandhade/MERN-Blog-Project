@@ -2,7 +2,7 @@ import express, { response } from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import { UserModel as User}  from './models/UserModel';
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken'
 import cookieParser from 'cookie-parser'
 import multer from 'multer';
@@ -14,7 +14,6 @@ dotenv.config();
 const port = process.env.PORT || 4000;
 const mongoUri = process.env.MONGO_URI;
 const secret = process.env.SECRET || 'SECRET';
-// Now you can access your environment variables using the `process.env` object
 
 const uploadMiddleWare = multer({
   dest:'uploads/'
@@ -59,7 +58,7 @@ app.post('/login', async (req,res) => {
         jwt.sign({userName,id:userDoc._id}, secret, {}, (err,token) => {
           if (err) throw err;
           if(token){
-            res.cookie('token', token).json({
+            res.cookie('token', token,{ maxAge: 3600000, httpOnly: true }).json({
               id:userDoc._id,
               userName,
             });
