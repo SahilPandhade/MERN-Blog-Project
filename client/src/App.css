@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+body {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+img {
+  max-width: 100%;
+}
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* header a {
+  text-decoration: none;
+  color: inherit;
+} */
+
+header a.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #222;
+
+}
+header a.logo:hover {
+  transform: scale(1.05);
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+
+  align-items: center;
+}
+
+header nav > * {
+  margin-left: 10px;
+}
+
+header nav > *:first-child {
+  margin-left: 0;
+}
+
+header nav > *:hover {
+  color: #007bff;
+}
+
+header nav > *:active {
+  color: #0056b3;
+}
+header nav > *:focus {
+  outline: none;
+  color: #007bff;
+}
+
+nav > a,
+nav > button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  padding: 10px 15px;
+  transition: color 0.2s ease-in-out;
+}
+
+nav > a:hover,
+nav > button:hover {
+  color: #fff;
+}
+
+nav > a.active,
+nav > button.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+/* .logout-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+} */
+.headerBtn {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.headerBtn:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
+
+.post {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.post:hover {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.post .image {
+  margin-right: 1rem;
+  width: 20rem;
+  height: 14rem;
+  overflow: hidden;
+}
+
+.post .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post .image img:hover {
+  transform: scale(1.05);
+}
+
+.post .texts {
+  flex: 1;
+}
+
+.post .texts h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.post .texts .info {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.post .texts .author {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.post .texts .author:hover {
+  color: #0077b5;
+}
+
+.post .texts p.summary {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.post .texts p.summary:hover {
+  color: #0077b5;
+}
+
+
+form.login,form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+
+}
+form.login h1,form.register h1 {
+  text-align: center;
+}
+
+.post-page .image{
+  display: flex;
+  max-height: 300px;
+  overflow: hidden;
+}
+.post-page .image img{
+  object-fit: cover;
+  object-position: center center;
+}
+.post-page a {
+  text-decoration: underline;
+  color: #333;
+}
+.post-page h1{
+  text-align: center;
+  margin: 10px 0 5px;
+}
+.post-page time {
+  text-align: center;
+  display: block;
+  font-size: .7rem;
+  color: #aaa;
+}
+.post-page .author{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: .7rem;
+  font-weight: bold;
+}
+.post-page .content p{
+  line-height: 1.6rem;
+
+}
+
+.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+} 
+.post-page .edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius:5px;
+  text-decoration: none;
+}
+
+a svg{
+  height: 20px;
+
+}
